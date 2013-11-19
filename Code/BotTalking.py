@@ -26,8 +26,8 @@ class ConnectionData():
     def __init__(self):
         self.Bots = {}
         self.oC = {}
-        self.IP = '54.243.45.112'
-        print "My IP is: ", self.IP
+        #self.IP = 
+        #print "My IP is: ", self.IP
 
 DataStuff = ConnectionData()
 
