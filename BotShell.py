@@ -15,7 +15,6 @@ run = 2
 Connected = 1
 while Connected:
     Socker = socket.socket()
-    os.system('dir')
     Storg = Runcode.Datas(open('UserData/Data.txt','r'))
     Runcode.init(Socker,Storg)
     Connected,run = 1,1;print "Connected!"
