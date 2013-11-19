@@ -22,9 +22,9 @@ class Datas():
         for line in Filer:
             if line[-1] == '\n':
                 line = line[:-1]
-            if line == '':
+            elif line == '':
                 continue
-            if line[0] == '%':
+            elif line[0] == '%':
                 comma =line.find(',')
                 cmd = line[1:comma]
                 if cmd == 'RespondTo':
@@ -56,10 +56,11 @@ def init(S,Stg):
         print line
         if "Nickname is already in use." in line:
             S.send('NS ghost '+Stg.CI['REALNAME'] + ' '+ Stg.CI['PASS'] + '\n')
-        if 'End of /MOTD' in line or 'registered' in line or 'ghosted' in line:
+        elif 'End of /MOTD' in line or 'registered' in line or 'ghosted' in line:
             S.send('NS identify '+Stg.CI['PASS']+'\n')
-        if 'You are now identified' in line:
+        elif 'You are now identified' in line:
             identified = 1
+            print "Identified!"
     try: MasterBotter.Storage.Channels['Master']
     except KeyError:
         return
