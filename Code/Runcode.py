@@ -25,6 +25,7 @@ class Datas():
             elif line == '':
                 continue
             elif line[0] == '%':
+                print "Narf"
                 comma =line.find(',')
                 cmd = line[1:comma]
                 if cmd == 'RespondTo':
