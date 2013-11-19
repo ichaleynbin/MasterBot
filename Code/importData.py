@@ -7,5 +7,5 @@ def initData():
     if not os.path.isdir('./UserData/'):
         os.mkdir('./UserData/')
     if not os.path.isfile('./UserData/Data.txt'):
-        for item in ['ChannelsPickle','UsersPickle','BotsPickle','LoginInfoPickle','LinksPickle','Data.txt']:
+        for item in ['ChannelsPickle','UsersPickle','BotsPickle','LoginInfoPickle','LinksPickle','Data.txt','PermLoggedInfoPickle']:
             os.system('cp ./NewData/'+item+' ./UserData/'+item+'\n')
