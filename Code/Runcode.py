@@ -38,6 +38,7 @@ class Datas():
             elif line[0] == '@':
                 self.OU[line[1:-3]] = line[-2:]
                 MasterBotter.Storage.Users[line[1:-3]] = int(line[-2:])
+        print self.CI
 
 def init(S,Stg):
     '''Log the bot in and connect it to channels.'''
