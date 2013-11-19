@@ -44,7 +44,8 @@ def init(S,Stg):
     
     S.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
     S.settimeout(300.0)
-    S.connect((Stg.CI['HOST'],int(Stg.CI['PORT'])))
+    try: S.connect((Stg.CI['HOST'],int(Stg.CI['PORT'])))
+    except ValueError: quit('Please initialize your data in UserData/Data.txt properly!')
     S.send('USER '+Stg.CI['IDENT']+' '+Stg.CI['HOST']+' '+Stg.CI['OWNER']+' :' + Stg.CI['REALNAME']+ ' Script\n')
     S.send('NICK '+Stg.CI['NICK']+'\n')
     identified = 0
