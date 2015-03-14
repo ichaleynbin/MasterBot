@@ -253,7 +253,7 @@ def reFill(fillers,M):
             for subitem in item:
                 subfill = fillers[:indy] + [subitem]+ fillers[indy+1:]
                 for itemize in subfill[indy:]:
-                    if type(itemize) is type([]) or type(itemize) is type((x for x in [1])):
+                    if type(itemize) is list or type(itemize) is int:
                         addedlist = reFill(subfill,M)
                         break
                 else:
